@@ -10,7 +10,7 @@ interface ClosingCTAProps {
 
 export function ClosingCTA({ onOpenConsultation }: ClosingCTAProps) {
   return (
-    <section className="bg-[#10175F] text-white py-24 lg:py-36 relative overflow-hidden">
+    <section className="bg-[#10175F] text-white py-18 lg:py-24 relative overflow-hidden">
       {/* Background radial accent */}
       <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-[#17216F] rounded-full blur-3xl opacity-50 pointer-events-none" />
       <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-[#F32632] rounded-full blur-3xl opacity-10 pointer-events-none" />
@@ -19,7 +19,7 @@ export function ClosingCTA({ onOpenConsultation }: ClosingCTAProps) {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl mx-auto text-center"
         >

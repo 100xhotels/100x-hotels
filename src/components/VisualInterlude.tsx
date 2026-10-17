@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export function VisualInterlude() {
   return (
-    <section className="relative w-full h-[520px] sm:h-[620px] lg:h-[720px] overflow-hidden bg-[#10175F]">
+    <section className="relative w-full h-[420px] sm:h-[480px] lg:h-[540px] overflow-hidden bg-[#10175F]">
       {/* High-Resolution Cinematic Luxury Hospitality Photography */}
       <Image
         src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2000&auto=format&fit=crop"
@@ -24,7 +24,7 @@ export function VisualInterlude() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-[1440px] w-full mx-auto px-6 sm:px-10 lg:px-16 text-center"
         >

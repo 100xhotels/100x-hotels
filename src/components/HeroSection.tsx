@@ -11,7 +11,7 @@ interface HeroSectionProps {
 
 export function HeroSection({ onOpenConsultation }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden bg-white pt-16 pb-24 md:pt-20 md:pb-32 lg:pt-24 lg:pb-36">
+    <section className="relative overflow-hidden bg-white pt-10 pb-16 md:pt-14 md:pb-20 lg:pt-16 lg:pb-20">
       
       {/* Subtle organic luxury ambient glow in background (non-neon) */}
       <div className="absolute top-1/4 -left-48 w-96 h-96 bg-[#F3F4F7] rounded-full blur-3xl opacity-70 pointer-events-none" />

@@ -28,19 +28,19 @@ export function CredibilityStrip() {
   ];
 
   return (
-    <section id="credibility" className="bg-[#F8F9FB] py-20 lg:py-24">
+    <section id="credibility" className="bg-[#F8F9FB] py-14 lg:py-16">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
         
         {/* Core Restrained Statement */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-14 flex flex-col md:flex-row md:items-end justify-between gap-6"
+          className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
           <div>
-            <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#687086] block mb-3 font-mono">
+            <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#687086] block mb-2 font-mono">
               Commercial Capability
             </span>
             <p className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#10175F] font-heading leading-tight max-w-2xl">
@@ -57,13 +57,13 @@ export function CredibilityStrip() {
         </motion.div>
 
         {/* 4 Open Capability Pillars (No card borders or circle pointers) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {pillars.map((pillar, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="group"
             >

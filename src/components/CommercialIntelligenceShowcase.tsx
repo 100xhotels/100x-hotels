@@ -18,7 +18,7 @@ export function CommercialIntelligenceShowcase() {
   return (
     <section
       id="intelligence"
-      className="bg-[#10175F] text-white py-24 lg:py-36 relative overflow-hidden"
+      className="bg-[#10175F] text-white py-16 lg:py-20 relative overflow-hidden"
     >
       {/* Background ambient depth */}
       <div className="absolute inset-0 bg-radial-[at_top_right] from-[#17216F] via-[#10175F] to-[#0A0E3C] opacity-90" />
@@ -29,9 +29,9 @@ export function CommercialIntelligenceShowcase() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-3xl mb-16 lg:mb-20"
+          className="max-w-3xl mb-12 lg:mb-14"
         >
           <div className="inline-flex items-center gap-3 mb-4">
             <span className="w-6 h-[1.5px] bg-[#F32632]" />
@@ -58,7 +58,7 @@ export function CommercialIntelligenceShowcase() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="bg-[#121B66] shadow-2xl overflow-hidden"
         >

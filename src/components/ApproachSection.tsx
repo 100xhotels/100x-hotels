@@ -47,16 +47,16 @@ export function ApproachSection() {
   ];
 
   return (
-    <section id="approach" className="bg-white py-24 lg:py-36">
+    <section id="approach" className="bg-white py-16 lg:py-20">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
         
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-3xl mb-16 lg:mb-24"
+          className="max-w-3xl mb-12 lg:mb-16"
         >
           <div className="inline-flex items-center gap-3 mb-4">
             <span className="w-6 h-[1.5px] bg-[#F32632]" />
@@ -85,7 +85,7 @@ export function ApproachSection() {
               key={idx}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
+              viewport={{ once: true, amount: 0.1 }}
               transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="group flex flex-col bg-[#F8F9FB] p-8 sm:p-10 shadow-sm hover:shadow-xl transition-luxury"
             >
