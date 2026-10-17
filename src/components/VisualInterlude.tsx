@@ -9,6 +9,7 @@ export function VisualInterlude() {
         src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2000&auto=format&fit=crop"
         alt="Serene architectural luxury hotel destination with authentic materials and warm atmospheric lighting"
         fill
+        unoptimized
         className="object-cover object-center filter brightness-[0.82] contrast-[1.05]"
       />
 

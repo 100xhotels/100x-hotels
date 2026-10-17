@@ -76,6 +76,7 @@ export function HeroSection({ onOpenConsultation }: HeroSectionProps) {
                   alt="Curated luxury boutique hotel interior architecture with natural light"
                   fill
                   priority
+                  unoptimized
                   className="object-cover object-center filter brightness-[0.96] contrast-[1.03]"
                 />
                 
