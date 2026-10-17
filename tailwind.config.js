@@ -20,23 +20,33 @@ module.exports = {
       },
       fontFamily: {
         sans: [
-          "Inter",
+          '"Plus Jakarta Sans"',
           "-apple-system",
           "BlinkMacSystemFont",
           "Segoe UI",
           "Roboto",
           "sans-serif",
         ],
+        serif: [
+          '"Playfair Display"',
+          '"Cormorant Garamond"',
+          "Georgia",
+          "serif",
+        ],
         heading: [
-          "Manrope",
-          "Inter",
+          '"Plus Jakarta Sans"',
           "-apple-system",
           "BlinkMacSystemFont",
-          "Segoe UI",
           "sans-serif",
         ],
+        editorial: [
+          '"Playfair Display"',
+          '"Cormorant Garamond"',
+          "Georgia",
+          "serif",
+        ],
         mono: [
-          "JetBrains Mono",
+          '"JetBrains Mono"',
           "SFMono-Regular",
           "Menlo",
           "Monaco",

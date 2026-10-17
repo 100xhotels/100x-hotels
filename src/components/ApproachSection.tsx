@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function ApproachSection() {
   const stages = [
@@ -45,84 +47,88 @@ export function ApproachSection() {
   ];
 
   return (
-    <section id="approach" className="bg-white py-24 lg:py-32 border-b border-[#F3F4F7]">
+    <section id="approach" className="bg-white py-24 lg:py-36">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
         
         {/* Section Header */}
-        <div className="max-w-2xl mb-16 lg:mb-20">
-          <div className="inline-flex items-center gap-2 mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#F32632]" />
-            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#687086]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-3xl mb-16 lg:mb-24"
+        >
+          <div className="inline-flex items-center gap-3 mb-4">
+            <span className="w-6 h-[1.5px] bg-[#F32632]" />
+            <span className="text-xs font-semibold tracking-[0.2em] uppercase text-[#687086] font-mono">
               Our Methodology
             </span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#10175F] tracking-tight font-heading leading-tight mb-4">
-            From understanding performance to improving it.
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#10175F] tracking-tight font-heading leading-tight mb-5">
+            From understanding performance to{" "}
+            <span className="font-editorial italic font-normal text-[#10175F]">
+              improving it
+            </span>
+            .
           </h2>
 
           <p className="text-lg text-[#687086] leading-relaxed">
             A disciplined, three-stage advisory process that turns complex hospitality commercial data into consistent financial performance.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Horizontal Editorial Timeline / Structured Sequence */}
-        <div className="relative">
-          
-          {/* Subtle Horizontal Connecting Line spanning the 3 stages */}
-          <div className="hidden lg:block absolute top-[28px] left-[40px] right-[40px] h-[1px] bg-[#E2E5EC] z-0" />
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12 relative z-10">
-            {stages.map((stage, idx) => (
-              <div
-                key={idx}
-                className="group flex flex-col bg-white border border-[#E2E5EC] p-8 sm:p-10 hover:border-[#10175F] transition-all duration-200"
-              >
-                {/* Stage Header with Number & Indicator */}
-                <div className="flex items-center justify-between pb-6 mb-6 border-b border-[#F3F4F7]">
-                  <div className="flex items-center gap-3">
-                    <span className="w-2 h-2 rounded-full bg-[#10175F] group-hover:bg-[#F32632] transition-colors" />
-                    <span className="text-3xl font-extrabold font-mono text-[#10175F] tracking-tighter">
-                      {stage.num}
-                    </span>
-                  </div>
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-[#687086]">
-                    Stage {stage.num}
-                  </span>
-                </div>
-
-                {/* Title & Tagline */}
-                <h3 className="text-2xl font-bold text-[#10175F] font-heading mb-1.5">
-                  {stage.title}
-                </h3>
-                <div className="text-xs font-semibold text-[#F32632] uppercase tracking-wider mb-4 font-mono">
-                  {stage.tagline}
-                </div>
-
-                {/* Primary Description */}
-                <p className="text-sm text-[#687086] leading-relaxed mb-8">
-                  {stage.description}
-                </p>
-
-                {/* Deliverables Checklist */}
-                <div className="mt-auto pt-6 border-t border-[#F3F4F7]">
-                  <div className="text-[11px] font-semibold uppercase tracking-wider text-[#10175F] mb-3">
-                    Key Advisory Workstreams
-                  </div>
-                  <ul className="space-y-2 text-xs text-[#687086]">
-                    {stage.deliverables.map((item, dIdx) => (
-                      <li key={dIdx} className="flex items-start gap-2">
-                        <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#E2E5EC] group-hover:bg-[#10175F] mt-1.5 shrink-0 transition-colors" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
+        {/* Horizontal Editorial Timeline (Clean, borderless, airy) */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-14">
+          {stages.map((stage, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: idx * 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="group flex flex-col bg-[#F8F9FB] p-8 sm:p-10 shadow-sm hover:shadow-xl transition-luxury"
+            >
+              {/* Stage Header with Number */}
+              <div className="flex items-center justify-between pb-6 mb-6 border-b border-slate-200/80">
+                <span className="text-4xl sm:text-5xl font-extrabold font-mono text-[#10175F] tracking-tighter group-hover:text-[#F32632] transition-colors">
+                  {stage.num}
+                </span>
+                <span className="text-xs font-mono uppercase tracking-wider text-[#687086]">
+                  Stage {stage.num}
+                </span>
               </div>
-            ))}
-          </div>
 
+              {/* Title & Tagline */}
+              <h3 className="text-2xl font-bold text-[#10175F] font-heading mb-1.5">
+                {stage.title}
+              </h3>
+              <div className="text-xs font-semibold text-[#F32632] uppercase tracking-wider mb-5 font-mono">
+                {stage.tagline}
+              </div>
+
+              {/* Primary Description */}
+              <p className="text-sm text-[#687086] leading-relaxed mb-8">
+                {stage.description}
+              </p>
+
+              {/* Deliverables (No circle pointers, clean typographic dashes) */}
+              <div className="mt-auto pt-6 border-t border-slate-200/80">
+                <div className="text-xs font-semibold uppercase tracking-wider text-[#10175F] mb-4 font-heading">
+                  Key Advisory Workstreams
+                </div>
+                <ul className="space-y-2.5 text-xs text-[#687086]">
+                  {stage.deliverables.map((item, dIdx) => (
+                    <li key={dIdx} className="flex items-start gap-2.5">
+                      <span className="text-[#F32632] font-mono text-sm leading-none select-none">—</span>
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+            </motion.div>
+          ))}
         </div>
 
       </div>

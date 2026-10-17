@@ -20,8 +20,7 @@ export function Footer() {
               100X Hotel is a commercial intelligence and hospitality revenue optimization consultancy. We partner with hotel owners, operators, and asset managers to maximize ADR, RevPAR, and long-term asset value.
             </p>
 
-            <div className="flex items-center gap-3 text-xs font-mono text-slate-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F32632]" />
+            <div className="text-xs font-mono text-slate-400">
               <span>Precision behind every profitable stay.</span>
             </div>
           </div>
