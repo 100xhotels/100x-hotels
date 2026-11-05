@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 interface CoreServicesProps {
@@ -92,13 +93,22 @@ export function CoreServices({ onOpenConsultation }: CoreServicesProps) {
                   </div>
                 </div>
 
-                <button
-                  onClick={onOpenConsultation}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#10175F] hover:text-[#F32632] transition-colors group"
-                >
-                  <span>Evaluate your property&apos;s pricing architecture</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#F32632] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </button>
+                <div className="flex flex-wrap items-center gap-6">
+                  <button
+                    onClick={onOpenConsultation}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#10175F] hover:text-[#F32632] transition-colors group"
+                  >
+                    <span>Evaluate your property&apos;s pricing architecture</span>
+                    <ArrowUpRight className="w-4 h-4 text-[#F32632] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </button>
+                  <Link
+                    href="/services/revenue-strategy-pricing"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold uppercase tracking-wider text-[#F32632] hover:text-[#10175F] transition-colors"
+                  >
+                    <span>Dedicated Practice Page</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </div>
 
               {/* Right Visual Treatment: Dynamic Price Ladder Simulation */}
@@ -196,13 +206,22 @@ export function CoreServices({ onOpenConsultation }: CoreServicesProps) {
                   </div>
                 </div>
 
-                <button
-                  onClick={onOpenConsultation}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#10175F] hover:text-[#F32632] transition-colors group"
-                >
-                  <span>Review your distribution profitability mix</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#F32632] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </button>
+                <div className="flex flex-wrap items-center gap-6">
+                  <button
+                    onClick={onOpenConsultation}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#10175F] hover:text-[#F32632] transition-colors group"
+                  >
+                    <span>Review your distribution profitability mix</span>
+                    <ArrowUpRight className="w-4 h-4 text-[#F32632] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </button>
+                  <Link
+                    href="/services/distribution-channel-performance"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold uppercase tracking-wider text-[#F32632] hover:text-[#10175F] transition-colors"
+                  >
+                    <span>Dedicated Practice Page</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </div>
 
               {/* Right Visual Treatment: Channel Net Retention Graphic */}
@@ -317,13 +336,22 @@ export function CoreServices({ onOpenConsultation }: CoreServicesProps) {
                   </div>
                 </div>
 
-                <button
-                  onClick={onOpenConsultation}
-                  className="inline-flex items-center gap-2 text-sm font-semibold text-[#10175F] hover:text-[#F32632] transition-colors group"
-                >
-                  <span>Examine your hotel&apos;s forward commercial pacing</span>
-                  <ArrowUpRight className="w-4 h-4 text-[#F32632] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </button>
+                <div className="flex flex-wrap items-center gap-6">
+                  <button
+                    onClick={onOpenConsultation}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#10175F] hover:text-[#F32632] transition-colors group"
+                  >
+                    <span>Examine your hotel&apos;s forward commercial pacing</span>
+                    <ArrowUpRight className="w-4 h-4 text-[#F32632] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </button>
+                  <Link
+                    href="/services/performance-analytics-forecasting"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold uppercase tracking-wider text-[#F32632] hover:text-[#10175F] transition-colors"
+                  >
+                    <span>Dedicated Practice Page</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </div>
 
               {/* Right Visual Treatment: Forward 90-Day Forecast Pacing Sparkline */}

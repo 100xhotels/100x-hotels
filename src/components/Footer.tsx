@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Logo } from "./Logo";
 import { ArrowUpRight } from "lucide-react";
 
@@ -12,9 +13,9 @@ export function Footer() {
           
           {/* Brand & Narrative (Cols 1-5) */}
           <div className="lg:col-span-5">
-            <a href="#" className="inline-block mb-6 focus:outline-none" aria-label="100X Hotel">
+            <Link href="/" className="inline-block mb-6 focus:outline-none" aria-label="100X Hotel">
               <Logo variant="light" size="md" />
-            </a>
+            </Link>
 
             <p className="text-sm text-slate-300 leading-relaxed max-w-sm mb-6">
               100X Hotel is a commercial intelligence and hospitality revenue optimization consultancy. We partner with hotel owners, operators, and asset managers to maximize ADR, RevPAR, and long-term asset value.
@@ -32,29 +33,29 @@ export function Footer() {
             </div>
             <ul className="space-y-3 text-sm text-slate-300">
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <Link href="/#services" className="hover:text-white transition-colors">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#opportunity" className="hover:text-white transition-colors">
+                <Link href="/#opportunity" className="hover:text-white transition-colors">
                   Commercial Solutions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#approach" className="hover:text-white transition-colors">
+                <Link href="/#approach" className="hover:text-white transition-colors">
                   Our Approach
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#intelligence" className="hover:text-white transition-colors">
+                <Link href="/#intelligence" className="hover:text-white transition-colors">
                   Commercial Intelligence
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#credibility" className="hover:text-white transition-colors">
+                <Link href="/#credibility" className="hover:text-white transition-colors">
                   About Us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -66,29 +67,29 @@ export function Footer() {
             </div>
             <ul className="space-y-3 text-sm text-slate-300">
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <Link href="/services/revenue-strategy-pricing" className="hover:text-white transition-colors">
                   Revenue Strategy &amp; Dynamic Pricing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <Link href="/services/distribution-channel-performance" className="hover:text-white transition-colors">
                   Distribution &amp; Channel Performance
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="hover:text-white transition-colors">
+                <Link href="/services/performance-analytics-forecasting" className="hover:text-white transition-colors">
                   Performance Analytics &amp; Forecasting
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#opportunity" className="hover:text-white transition-colors">
+                <Link href="/#opportunity" className="hover:text-white transition-colors">
                   CompSet Benchmarking &amp; RGI Analysis
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#opportunity" className="hover:text-white transition-colors">
+                <Link href="/#opportunity" className="hover:text-white transition-colors">
                   Direct Channel Margin Engineering
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

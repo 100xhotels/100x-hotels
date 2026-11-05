@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { Logo } from "./Logo";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -22,11 +23,11 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
   }, []);
 
   const navLinks = [
-    { label: "Services", href: "#services" },
-    { label: "Solutions", href: "#opportunity" },
-    { label: "Our Approach", href: "#approach" },
-    { label: "Commercial Intelligence", href: "#intelligence" },
-    { label: "About Us", href: "#credibility" },
+    { label: "Pricing Strategy", href: "/services/revenue-strategy-pricing" },
+    { label: "Distribution", href: "/services/distribution-channel-performance" },
+    { label: "Analytics & Pacing", href: "/services/performance-analytics-forecasting" },
+    { label: "Our Approach", href: "/#approach" },
+    { label: "About", href: "/#credibility" },
   ];
 
   return (
@@ -45,26 +46,26 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
           
           {/* Left: Brand Logo with Generous Clear Space */}
           <div className="flex items-center">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="inline-flex items-center focus:outline-none"
               aria-label="100X Hotel Homepage"
             >
               <Logo variant="dark" size="md" />
-            </a>
+            </Link>
           </div>
 
           {/* Center/Right: Editorial Navigation Links */}
           <nav className="hidden lg:flex items-center space-x-10">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="group relative text-sm font-medium text-[#171A26] hover:text-[#10175F] py-2 transition-colors tracking-tight"
               >
                 <span>{link.label}</span>
                 <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-[#10175F] transition-all duration-300 ease-out group-hover:w-full" />
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -106,14 +107,14 @@ export function Navigation({ onOpenConsultation }: NavigationProps) {
           >
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-base font-medium text-[#10175F] py-1 border-b border-slate-100"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <div className="pt-2">
                 <button
