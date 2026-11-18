@@ -12,6 +12,8 @@ interface ConsultationModalProps {
 
 export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionError, setSubmissionError] = useState("");
   const [formData, setFormData] = useState({
     hotelName: "",
     propertyType: "Boutique Hotel (50-150 rooms)",
@@ -24,9 +26,30 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmissionError("");
+
+    try {
+      const response = await fetch("/api/consultation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        setSubmissionError("We couldn’t save your request. Please try again.");
+        return;
+      }
+
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Unable to submit consultation request.", error);
+      setSubmissionError("We couldn’t save your request. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
@@ -182,11 +205,17 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
                   <div className="pt-4">
                     <button
                       type="submit"
+                      disabled={isSubmitting}
                       className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#10175F] text-white font-semibold text-sm hover:bg-[#17216F] transition-luxury group shadow-md"
                     >
-                      <span>Submit Consultation Request</span>
+                      <span>{isSubmitting ? "Saving Request..." : "Submit Consultation Request"}</span>
                       <ArrowRight className="w-4 h-4 text-[#F32632] group-hover:translate-x-1.5 transition-transform" />
                     </button>
+                    {submissionError && (
+                      <p role="alert" className="mt-2.5 text-center text-sm text-red-300">
+                        {submissionError}
+                      </p>
+                    )}
                     <p className="mt-2.5 text-center text-xs text-[#687086]">
                       Confidential. Direct advisory response within 24 business hours.
                     </p>
@@ -202,7 +231,7 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
                   Consultation Request Received
                 </h3>
                 <p className="mt-2 text-sm text-[#687086] max-w-md mx-auto leading-relaxed">
-                  Thank you, {formData.name || "partner"}. A commercial partner specializing in {formData.propertyType} will review {formData.hotelName || "your property"} and contact you at {formData.email}.
+                  Thank you, {formData.name || "partner"}. Your consultation request for {formData.hotelName || "your property"} has been added to our records.
                 </p>
                 <div className="mt-6 pt-6 border-t border-slate-100 flex justify-center">
                   <button
