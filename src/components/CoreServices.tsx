@@ -11,7 +11,7 @@ interface CoreServicesProps {
 
 export function CoreServices({ onOpenConsultation }: CoreServicesProps) {
   return (
-    <section id="services" className="bg-[#F8F9FB] py-16 lg:py-20">
+    <section id="services" className="bg-[#E7E9EF] py-16 lg:py-20">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
         
         {/* Section Header */}

@@ -47,7 +47,7 @@ export function ApproachSection() {
   ];
 
   return (
-    <section id="approach" className="bg-white py-16 lg:py-20">
+    <section id="approach" className="bg-[#EFF0F4] py-16 lg:py-20">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
         
         {/* Section Header */}

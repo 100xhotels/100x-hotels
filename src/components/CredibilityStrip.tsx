@@ -1,85 +1,53 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
+
+const areas = [
+  {
+    title: "Pricing",
+    detail:
+      "Rates shaped around demand, market position, and the needs of your property.",
+  },
+  {
+    title: "Distribution",
+    detail:
+      "A clearer view of where bookings come from and what each channel costs.",
+  },
+  {
+    title: "Performance",
+    detail:
+      "Useful reporting that helps your team understand results and plan ahead.",
+  },
+  {
+    title: "Partnership",
+    detail:
+      "Practical conversations with people who understand hotel operations.",
+  },
+];
 
 export function CredibilityStrip() {
-  const pillars = [
-    {
-      num: "15+",
-      label: "Years Commercial Advisory",
-      detail: "Senior revenue leadership across boutique, luxury resort, and international hospitality portfolios.",
-    },
-    {
-      num: "280+",
-      label: "Properties Evaluated",
-      detail: "Rigorous commercial audits, rate architecture design, and channel profitability evaluations.",
-    },
-    {
-      num: "42",
-      label: "Primary Markets Served",
-      detail: "Active intelligence across European gateways, North American metros, and luxury leisure destinations.",
-    },
-    {
-      num: "$1.4B",
-      label: "Managed Room Inventory",
-      detail: "Specialized in unconstrained demand forecasting, dynamic pricing matrices, and direct mix growth.",
-    },
-  ];
-
   return (
-    <section id="credibility" className="bg-[#F8F9FB] py-14 lg:py-16">
+    <section id="credibility" className="bg-[#E7E9EF] py-14 lg:py-16">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
-        
-        {/* Core Restrained Statement */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6"
-        >
-          <div>
-            <span className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#687086] block mb-2 font-mono">
-              Commercial Capability
-            </span>
-            <p className="text-2xl sm:text-4xl font-extrabold tracking-tight text-[#10175F] font-heading leading-tight max-w-2xl">
-              Commercial thinking. Hospitality understanding.{" "}
-              <span className="font-editorial italic font-normal text-[#10175F]">
-                Measurable performance
-              </span>
-              .
-            </p>
-          </div>
-          <p className="text-sm text-[#687086] max-w-sm md:text-right leading-relaxed">
-            Advisory framework designed exclusively for institutional owners and independent luxury operators.
+        <div className="mb-9 max-w-2xl">
+          <p className="text-sm font-medium text-[#687086] mb-3">
+            How we can help
           </p>
-        </motion.div>
-
-        {/* 4 Open Capability Pillars (No card borders or circle pointers) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
-          {pillars.map((pillar, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.6, delay: idx * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="group"
-            >
-              <div className="text-3xl sm:text-4xl font-bold font-mono text-[#10175F] mb-2 tracking-tight group-hover:text-[#F32632] transition-colors">
-                {pillar.num}
-              </div>
-              <div className="text-sm font-semibold uppercase tracking-wider text-[#10175F] mb-2 font-heading">
-                {pillar.label}
-              </div>
-              <p className="text-xs text-[#687086] leading-relaxed">
-                {pillar.detail}
-              </p>
-            </motion.div>
-          ))}
+          <h2 className="text-3xl sm:text-4xl text-[#10175F] leading-tight">
+            Focused on the decisions that shape hotel performance.
+          </h2>
         </div>
 
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-7">
+          {areas.map((area) => (
+            <article key={area.title} className="border-t border-slate-300 pt-4">
+              <h3 className="text-base font-medium text-[#10175F] mb-2">
+                {area.title}
+              </h3>
+              <p className="text-sm text-[#687086] leading-relaxed">
+                {area.detail}
+              </p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

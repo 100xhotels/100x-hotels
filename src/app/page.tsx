@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Navigation } from "@/components/Navigation";
+import { DistributionTicker } from "@/components/DistributionTicker";
 import { HeroSection } from "@/components/HeroSection";
 import { CredibilityStrip } from "@/components/CredibilityStrip";
 import { CommercialOpportunity } from "@/components/CommercialOpportunity";
@@ -17,12 +18,14 @@ export default function HomePage() {
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white text-[#171A26] flex flex-col font-sans selection:bg-[#10175F] selection:text-white">
+    <div className="min-h-screen bg-[#EFF0F4] text-[#171A26] flex flex-col font-sans selection:bg-[#10175F] selection:text-white">
       {/* Section 1 — Navigation */}
       <Navigation onOpenConsultation={() => setIsConsultationOpen(true)} />
 
       {/* Main Content Sections */}
       <main className="flex-1">
+        <DistributionTicker />
+
         {/* Section 2 — Hero: Make every room work harder */}
         <HeroSection onOpenConsultation={() => setIsConsultationOpen(true)} />
 
