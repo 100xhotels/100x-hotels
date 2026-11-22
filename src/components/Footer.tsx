@@ -102,15 +102,21 @@ export function Footer() {
             <div className="space-y-3 text-xs text-slate-300 leading-relaxed">
               <div>
                 <span className="font-semibold text-white block">London Advisory Desk</span>
-                <span className="text-slate-400 font-mono text-[11px]">[Contact details on consultation request]</span>
+                <a href="tel:+918368239837" className="text-slate-400 hover:text-white font-mono text-[11px] transition-colors">
+                  +91 83682 39837
+                </a>
               </div>
               <div>
                 <span className="font-semibold text-white block">Singapore Regional Desk</span>
-                <span className="text-slate-400 font-mono text-[11px]">[Contact details on consultation request]</span>
+                <a href="tel:+918368239837" className="text-slate-400 hover:text-white font-mono text-[11px] transition-colors">
+                  +91 83682 39837
+                </a>
               </div>
               <div>
                 <span className="font-semibold text-white block">New York Commercial Desk</span>
-                <span className="text-slate-400 font-mono text-[11px]">[Contact details on consultation request]</span>
+                <a href="tel:+918368239837" className="text-slate-400 hover:text-white font-mono text-[11px] transition-colors">
+                  +91 83682 39837
+                </a>
               </div>
             </div>
 
