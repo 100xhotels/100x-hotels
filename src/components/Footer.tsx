@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { ArrowUpRight } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -94,45 +94,62 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Commercial Desks / Contact Info Placeholders (Cols 10-12) */}
+          {/* Contact (Cols 10-12) */}
           <div className="lg:col-span-2">
             <div className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-4 font-mono">
-              Commercial Desks
+              Contact
             </div>
-            <div className="space-y-3 text-xs text-slate-300 leading-relaxed">
-              <div>
-                <span className="font-semibold text-white block">London Advisory Desk</span>
-                <a href="tel:+918368239837" className="text-slate-400 hover:text-white font-mono text-[11px] transition-colors">
-                  +91 83682 39837
-                </a>
-              </div>
-              <div>
-                <span className="font-semibold text-white block">Singapore Regional Desk</span>
-                <a href="tel:+918368239837" className="text-slate-400 hover:text-white font-mono text-[11px] transition-colors">
-                  +91 83682 39837
-                </a>
-              </div>
-              <div>
-                <span className="font-semibold text-white block">New York Commercial Desk</span>
-                <a href="tel:+918368239837" className="text-slate-400 hover:text-white font-mono text-[11px] transition-colors">
-                  +91 83682 39837
-                </a>
-              </div>
+            <div className="space-y-4 text-xs text-slate-300 leading-relaxed">
+              <a
+                href="tel:+918368239837"
+                className="block text-slate-300 hover:text-white font-mono text-[12px] transition-colors"
+              >
+                +91 83682 39837
+              </a>
+              <a
+                href="mailto:contact@100xhotel.com"
+                className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors break-all"
+              >
+                <Mail className="w-4 h-4 shrink-0 text-[#F32632]" />
+                <span>contact@100xhotel.com</span>
+              </a>
             </div>
 
-            {/* LinkedIn Link */}
-            <div className="mt-6 pt-4 border-t border-white/10">
+            <div className="mt-6 flex items-center gap-3">
               <a
-                href="https://www.linkedin.com"
+                href="https://www.instagram.com/100xhotel"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs text-slate-300 hover:text-white transition-colors group"
+                aria-label="Instagram"
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-white/15 text-slate-300 hover:text-white hover:border-white/40 transition-colors"
               >
-                <svg className="w-4 h-4 fill-current text-[#F32632]" viewBox="0 0 24 24">
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
                 </svg>
-                <span>LinkedIn Corporate Profile</span>
-                <ArrowUpRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-white transition-colors" />
+              </a>
+              <a
+                href="https://www.facebook.com/share/1JiKZMgfc9/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-white/15 text-slate-300 hover:text-white hover:border-white/40 transition-colors"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.026 1.792-4.698 4.533-4.698 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.49 0-1.956.932-1.956 1.887v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z" />
+                </svg>
+              </a>
+              <a
+                href="https://x.com/100xhotel"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X"
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-white/15 text-slate-300 hover:text-white hover:border-white/40 transition-colors"
+              >
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817-5.967 6.817H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
               </a>
             </div>
           </div>
